@@ -6,7 +6,7 @@ import (
 
 func main() {
 
-	fs := http.FileServer(http.Dir("poetry"))
+	fs := http.FileServer(http.Dir("/root/go/src/github.com/ntrianta/fiveMinutePoetry/poetry/"))
 	http.Handle("/", fs)
 
 	http.ListenAndServe(":80", nil)
